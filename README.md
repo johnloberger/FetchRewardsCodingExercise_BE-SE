@@ -19,6 +19,7 @@
     This React single-page application is designed to compare any two software version numbers. 
     <br />
     <br />
+    <a href="https://versionanalyzer.netlify.app">🖥️ LIVE Demo!</a>
     ·
     <a href="https://github.com/johnloberger/FetchRewardsCodingExercise_BE-SE/issues">Report Bug</a>
     ·
