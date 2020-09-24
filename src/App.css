@@ -68,10 +68,14 @@ div.form-container {
   transition: all 0.4s;
 }
 
-.compare-btn:hover,
-.compare-btn:focus {
+.compare-btn:hover {
   background-color: white;
   color: #333333;
+  outline: none;
+}
+
+.compare-btn:focus {
+  outline: none;
 }
 
 label {
