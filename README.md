@@ -10,7 +10,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/johnloberger/FetchRewardsCodingExercise_BE-SE">
-    <img src="https://images.squarespace-cdn.com/content/v1/59d39a7037c581d0d49cd94f/1565285374265-PIP0ZQDLD0OUDU5VL43B/ke17ZwdGBToddI8pDm48kLxnK526YWAH1qleWz-y7AFZw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVH-2yKxPTYak0SCdSGNKw8A2bnS_B4YtvNSBisDMT-TGt1lH3P2bFZvTItROhWrBJ0/Threadmark+-+Cover.gif" alt="Logo">
+    <img height="100px" width="100px" src="https://images.squarespace-cdn.com/content/v1/59d39a7037c581d0d49cd94f/1565285374265-PIP0ZQDLD0OUDU5VL43B/ke17ZwdGBToddI8pDm48kLxnK526YWAH1qleWz-y7AFZw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVH-2yKxPTYak0SCdSGNKw8A2bnS_B4YtvNSBisDMT-TGt1lH3P2bFZvTItROhWrBJ0/Threadmark+-+Cover.gif" alt="Logo">
   </a>
 
   <h3 align="center">Welcome to Version Analyzer 1.0!</h3>
@@ -85,7 +85,7 @@ Project Link: [https://github.com/johnloberger/FetchRewardsCodingExercise_BE-SE]
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[forks-shield]: https://github.com/johnloberger/FetchRewardsCodingExercise_BE-SE.svg?style=flat-square
+[forks-shield]: https://img.shields.io/github/forks/johnloberger/FetchRewardsCodingExercise_BE-SE.svg?style=flat-square
 [forks-url]: https://github.com/johnloberger/FetchRewardsCodingExercise_BE-SE/network/members
 [stars-shield]: https://img.shields.io/github/stars/johnloberger/FetchRewardsCodingExercise_BE-SE.svg?style=flat-square
 [stars-url]: https://github.com/johnloberger/FetchRewardsCodingExercise_BE-SE/stargazers
