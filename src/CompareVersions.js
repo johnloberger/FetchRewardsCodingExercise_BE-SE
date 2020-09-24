@@ -56,13 +56,15 @@ class CompareVersions extends React.Component {
       <div style={{top: '8%', position: 'absolute'}}>
       <div class="prompt">
         <h3>Welcome to Version Analyzer 1.0</h3>
+        <p style={{ color: 'rgba(255, 255, 255, 0.5)'}}>Accepted Formats:  '1' -- '1.2' -- '1.2.3'</p>
         <div class="form-container">
           <section>
             <form onSubmit={this.handleFormSubmit} class="compare-form">
               <label>
                 <input
                   onChange={this.handleChange}
-                  type="Version1"
+                  type="text"
+                  pattern="[+]?[0-9]*[.]?[0-9]?[0-9]*[.]?[0-9]*[.]?[0-9]+"
                   name="Version1"
                   id="version1"
                   autoComplete="off"
@@ -73,7 +75,7 @@ class CompareVersions extends React.Component {
               <label>
                 <input
                   onChange={this.handleChange}
-                  type="Version2"
+                  type="text"
                   name="Version2"
                   id="version2"
                   autoComplete="off"
