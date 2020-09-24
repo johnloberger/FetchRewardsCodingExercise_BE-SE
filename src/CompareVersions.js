@@ -4,7 +4,17 @@ class CompareVersions extends React.Component {
   state = {
     Version1: "",
     Version2: "",
+    comparisonResult: false
   };
+
+  shouldComponentUpdate(nextProps, nextState){
+    if (this.state.Version1 !== nextState.Version1){
+      return false
+    } else if (this.state.Version2 !== nextState.Version2){
+      return false
+    }
+    return true
+  }
 
   handleChange = (event) => {
     this.setState({
@@ -14,9 +24,10 @@ class CompareVersions extends React.Component {
 
   handleFormSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state.Version1, this.state.Version2);
-    console.log(this.compareVersions(this.state.Version1, this.state.Version2));
-  };
+    this.setState({
+      comparisonResult: this.compareVersions(this.state.Version1, this.state.Version2)
+    })
+  }
 
   compareVersions = (version1, version2) => {
     let current = version1
@@ -38,8 +49,12 @@ class CompareVersions extends React.Component {
   };
 
   render() {
+    let equal = <span style={{color: '#03fcf4'}}>equal</span>
+    let after = <span style={{color: '#ff3d3d'}}>after</span>
+    let before = <span style={{color: '#3dff5a'}}>before</span>
     return (
-      <div>
+      <div style={{top: '8%', position: 'absolute'}}>
+      <div class="prompt">
         <h3>Welcome to Version Analyzer 1.0</h3>
         <div class="form-container">
           <section>
@@ -50,9 +65,10 @@ class CompareVersions extends React.Component {
                   type="Version1"
                   name="Version1"
                   id="version1"
+                  autoComplete="off"
                   required
                 />
-                <div class="label-text">Version 1</div>
+                <div class="label-text">Version A</div>
               </label>
               <label>
                 <input
@@ -60,9 +76,11 @@ class CompareVersions extends React.Component {
                   type="Version2"
                   name="Version2"
                   id="version2"
+                  autoComplete="off"
+
                   required
                 />
-                <div class="label-text">Version 2</div>
+                <div class="label-text">Version B</div>
               </label>
               <br></br>
               <button class="compare-btn" type="submit" value="Submit">
@@ -72,6 +90,12 @@ class CompareVersions extends React.Component {
             </form>
           </section>
         </div>
+      </div>
+      <div>
+        {this.state.comparisonResult === 0 ? <h2>Version {this.state.Version1} is {equal} to Version {this.state.Version2}</h2>
+        : this.state.comparisonResult === 1 ? <h2>Version {this.state.Version1} was made {after} Version {this.state.Version2}</h2>
+        : this.state.comparisonResult === -1 ? <h2>Version {this.state.Version1} was made {before} Version {this.state.Version2}</h2> : null}
+      </div>
       </div>
     );
   }
