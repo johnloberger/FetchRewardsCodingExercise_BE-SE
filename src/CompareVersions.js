@@ -81,6 +81,7 @@ class CompareVersions extends React.Component {
                   <input
                     onChange={this.handleChange}
                     type="text"
+                    pattern="[+]?[0-9]*[.]?[0-9]?[0-9]*[.]?[0-9]*[.]?[0-9]+"
                     name="Version2"
                     id="version2"
                     autoComplete="off"
